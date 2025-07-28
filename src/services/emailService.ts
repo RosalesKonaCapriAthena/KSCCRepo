@@ -43,7 +43,13 @@ export const sendEmail = async (data: EmailData, formType: string): Promise<bool
 
 // Specific email functions for different forms
 export const sendContactEmail = async (data: { name: string; email: string; message: string }): Promise<boolean> => {
-  return sendEmail(data, 'Contact Form');
+  // Convert the contact form data to match EmailData interface
+  const emailData: EmailData = {
+    name: data.name,
+    email: data.email,
+    message: data.message
+  };
+  return sendEmail(emailData, 'Contact Form');
 };
 
 export const sendTutorApplicationEmail = async (data: EmailData): Promise<boolean> => {
@@ -55,5 +61,11 @@ export const sendStudentRegistrationEmail = async (data: EmailData): Promise<boo
 };
 
 export const sendDonationEmail = async (data: { name: string; email: string; message: string }): Promise<boolean> => {
-  return sendEmail(data, 'Donation Inquiry');
+  // Convert the donation form data to match EmailData interface
+  const emailData: EmailData = {
+    name: data.name,
+    email: data.email,
+    message: data.message
+  };
+  return sendEmail(emailData, 'Donation Inquiry');
 }; 
