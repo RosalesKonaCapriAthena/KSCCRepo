@@ -52,7 +52,18 @@ exports.handler = async (event, context) => {
     }
 
     // Format database ID with hyphens if needed
-    const formattedDatabaseId = WORKSHOPS_DATABASE_ID.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
+    let formattedDatabaseId = WORKSHOPS_DATABASE_ID;
+    
+    // Only add hyphens if they don't already exist
+    if (!formattedDatabaseId.includes('-')) {
+      formattedDatabaseId = formattedDatabaseId.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
+    }
+    
+    console.log('Database ID formatting:', {
+      original: WORKSHOPS_DATABASE_ID,
+      formatted: formattedDatabaseId,
+      hasHyphens: WORKSHOPS_DATABASE_ID.includes('-')
+    });
 
     const response = await notion.pages.create({
       parent: { database_id: formattedDatabaseId },
