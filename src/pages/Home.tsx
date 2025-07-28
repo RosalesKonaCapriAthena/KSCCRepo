@@ -88,30 +88,30 @@ const Home = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-                  Enabling the next
+                  KSCC
                   <br />
                   <span className="text-[#4338ca]">
-                    generation of STEM leaders
+                    Nexel
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                  Join us in making STEM a top priority in our schools.
+                  A STEM-based tutoring organization hosted by the Koreatown Senior and Community Center, we strive to support young students from underprivileged and low-income backgrounds.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/donate"
+                  to="/tutors"
                   className="group bg-[#4338ca] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
                 >
-                  Make a tax-free donation
+                  Volunteer as a Tutor
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/tutors"
+                  to="/families"
                   className="group bg-transparent text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 border-2 border-white hover:border-gray-200 flex items-center justify-center"
                 >
-                  Join the team
+                  Sign Up a Student
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

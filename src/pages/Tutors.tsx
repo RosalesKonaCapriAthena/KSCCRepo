@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { sendTutorApplicationEmail } from '../services/emailService';
 import { 
   AcademicCapIcon, 
   UserGroupIcon, 
@@ -34,12 +35,22 @@ const Tutors = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest in volunteering! We\'ll contact you within 24 hours to discuss next steps.');
-    setFormData({ name: '', email: '', educationLevel: '', subjects: '', hoursAvailable: '' });
+    
+    try {
+      const success = await sendTutorApplicationEmail(formData);
+      
+      if (success) {
+        alert('Thank you for your interest in volunteering! We\'ll contact you within 24 hours to discuss next steps.');
+        setFormData({ name: '', email: '', educationLevel: '', subjects: '', hoursAvailable: '' });
+      } else {
+        alert('There was an error sending your application. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your application. Please try again or contact us directly.');
+    }
   };
 
   return (
@@ -287,10 +298,10 @@ const Tutors = () => {
 
             <div className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-gray-100">
               <div className="w-12 h-12 bg-[#4338ca]/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <CodeBracketIcon className="w-6 h-6 text-[#4338ca]" />
+                <BookOpenIcon className="w-6 h-6 text-[#4338ca]" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Computer Science</h3>
-              <p className="text-sm text-gray-600">Programming and web development skills</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Social Studies</h3>
+              <p className="text-sm text-gray-600">History, geography, and civics education</p>
             </div>
           </div>
         </div>

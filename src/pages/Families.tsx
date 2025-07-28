@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { sendStudentRegistrationEmail } from '../services/emailService';
 import { 
   AcademicCapIcon, 
   UserGroupIcon, 
@@ -31,12 +32,22 @@ const Families = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We\'ll contact you within 24 hours to discuss tutoring options.');
-    setFormData({ name: '', gradeLevel: '', subjects: '', email: '' });
+    
+    try {
+      const success = await sendStudentRegistrationEmail(formData);
+      
+      if (success) {
+        alert('Thank you for your interest! We\'ll contact you within 24 hours to discuss tutoring options.');
+        setFormData({ name: '', gradeLevel: '', subjects: '', email: '' });
+      } else {
+        alert('There was an error sending your request. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your request. Please try again or contact us directly.');
+    }
   };
 
   return (
