@@ -38,11 +38,30 @@ exports.handler = async (event, context) => {
       auth: process.env.VITE_NOTION_API_KEY,
     });
 
-    // Format database ID
+    // Clean and format database ID
     let databaseId = process.env.VITE_WORKSHOPS_DATABASE_ID;
+    
+    // Remove any query parameters or extra characters
+    databaseId = databaseId.split('?')[0];
+    
+    // Remove any quotes that might be present
+    databaseId = databaseId.replace(/"/g, '');
+    
+    // If it's longer than 36 characters (UUID length), truncate it
+    if (databaseId.length > 36) {
+      databaseId = databaseId.substring(0, 36);
+    }
+    
+    // Add hyphens if they don't exist
     if (!databaseId.includes('-')) {
       databaseId = databaseId.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
     }
+    
+    console.log('Database ID processing:', {
+      original: process.env.VITE_WORKSHOPS_DATABASE_ID,
+      cleaned: databaseId,
+      length: databaseId.length
+    });
 
     console.log('Testing Notion API with database ID:', databaseId);
 

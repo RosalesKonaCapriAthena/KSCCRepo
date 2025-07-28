@@ -51,18 +51,29 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // Format database ID with hyphens if needed
+    // Clean and format database ID
     let formattedDatabaseId = WORKSHOPS_DATABASE_ID;
     
-    // Only add hyphens if they don't already exist
+    // Remove any query parameters or extra characters
+    formattedDatabaseId = formattedDatabaseId.split('?')[0];
+    
+    // Remove any quotes that might be present
+    formattedDatabaseId = formattedDatabaseId.replace(/"/g, '');
+    
+    // If it's longer than 36 characters (UUID length), truncate it
+    if (formattedDatabaseId.length > 36) {
+      formattedDatabaseId = formattedDatabaseId.substring(0, 36);
+    }
+    
+    // Add hyphens if they don't exist
     if (!formattedDatabaseId.includes('-')) {
       formattedDatabaseId = formattedDatabaseId.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
     }
     
-    console.log('Database ID formatting:', {
+    console.log('Database ID processing:', {
       original: WORKSHOPS_DATABASE_ID,
-      formatted: formattedDatabaseId,
-      hasHyphens: WORKSHOPS_DATABASE_ID.includes('-')
+      cleaned: formattedDatabaseId,
+      length: formattedDatabaseId.length
     });
 
     const response = await notion.pages.create({
