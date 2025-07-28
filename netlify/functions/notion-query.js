@@ -25,6 +25,14 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    // Debug: Log environment variables (without exposing values)
+    console.log('Environment check:', {
+      hasNotionKey: !!process.env.VITE_NOTION_API_KEY,
+      notionKeyLength: process.env.VITE_NOTION_API_KEY ? process.env.VITE_NOTION_API_KEY.length : 0,
+      hasDatabaseId: !!process.env.VITE_WORKSHOPS_DATABASE_ID,
+      databaseIdLength: process.env.VITE_WORKSHOPS_DATABASE_ID ? process.env.VITE_WORKSHOPS_DATABASE_ID.length : 0,
+    });
+
     if (event.httpMethod !== 'POST') {
       return {
         statusCode: 405,
@@ -39,7 +47,21 @@ exports.handler = async (event, context) => {
       return {
         statusCode: 500,
         headers,
-        body: JSON.stringify({ error: 'Database ID not configured on server' }),
+        body: JSON.stringify({ 
+          error: 'Database ID not configured on server',
+          debug: 'WORKSHOPS_DATABASE_ID environment variable is missing'
+        }),
+      };
+    }
+
+    if (!process.env.VITE_NOTION_API_KEY) {
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: 'Notion API key not configured on server',
+          debug: 'VITE_NOTION_API_KEY environment variable is missing'
+        }),
       };
     }
 
