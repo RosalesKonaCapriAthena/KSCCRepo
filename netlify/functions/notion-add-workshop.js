@@ -33,8 +33,6 @@ exports.handler = async (event, context) => {
       };
     }
 
-    const body = JSON.parse(event.body);
-    
     if (!WORKSHOPS_DATABASE_ID) {
       return {
         statusCode: 500,
@@ -43,11 +41,22 @@ exports.handler = async (event, context) => {
       };
     }
 
+    const { properties } = JSON.parse(event.body);
+    
+    if (!properties) {
+      return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ error: 'Workshop properties are required' }),
+      };
+    }
+
     // Format database ID with hyphens if needed
     const formattedDatabaseId = WORKSHOPS_DATABASE_ID.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
 
-    const response = await notion.databases.query({
-      database_id: formattedDatabaseId,
+    const response = await notion.pages.create({
+      parent: { database_id: formattedDatabaseId },
+      properties: properties,
     });
 
     return {

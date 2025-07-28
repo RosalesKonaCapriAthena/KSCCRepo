@@ -4,6 +4,9 @@ const notion = new Client({
   auth: process.env.VITE_NOTION_API_KEY,
 });
 
+// Get database ID from environment variable
+const WORKSHOPS_DATABASE_ID = process.env.VITE_WORKSHOPS_DATABASE_ID;
+
 exports.handler = async (event, context) => {
   // Enable CORS
   const headers = {

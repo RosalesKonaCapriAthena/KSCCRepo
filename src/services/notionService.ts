@@ -1,12 +1,6 @@
 // Notion API service for workshops
-// You'll need to set up a Notion integration and get your API key and database ID
+// Uses Netlify Functions to handle API calls securely
 
-const NOTION_API_KEY = import.meta.env.VITE_NOTION_API_KEY || '';
-// Format database ID to include hyphens for Notion API
-const rawDatabaseId = (import.meta.env.VITE_WORKSHOPS_DATABASE_ID || '').split('?')[0];
-const WORKSHOPS_DATABASE_ID = rawDatabaseId.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
-
-// Use API server for development and production
 const API_BASE_URL = '/.netlify/functions';
 
 interface NotionWorkshop {
@@ -95,28 +89,14 @@ const fallbackWorkshops: NotionWorkshop[] = [
 ];
 
 export const fetchWorkshopsFromNotion = async (): Promise<NotionWorkshop[]> => {
-  // Debug: Log environment variables (without exposing the full API key)
-  console.log('Environment check:', {
-    hasApiKey: !!NOTION_API_KEY,
-    apiKeyLength: NOTION_API_KEY ? NOTION_API_KEY.length : 0,
-    apiKeyPrefix: NOTION_API_KEY ? NOTION_API_KEY.substring(0, 7) : 'none',
-    hasDatabaseId: !!WORKSHOPS_DATABASE_ID,
-    databaseId: WORKSHOPS_DATABASE_ID || 'none',
-    databaseIdLength: WORKSHOPS_DATABASE_ID ? WORKSHOPS_DATABASE_ID.length : 0
-  });
-  
-  // If Notion API is not configured, return fallback data
-  if (!NOTION_API_KEY || !WORKSHOPS_DATABASE_ID) {
-    console.warn('Notion API key or database ID not configured. Using fallback data.');
-    return fallbackWorkshops;
-  }
+  // Use Netlify Functions to handle Notion API calls securely
+  console.log('Fetching workshops from Notion via Netlify Functions...');
 
   try {
     // Use Netlify Functions to call Notion API
     const requestUrl = `${API_BASE_URL}/notion-query`;
     console.log('Making request to:', requestUrl);
     const requestBody = {
-      databaseId: rawDatabaseId,
       query: {
         sorts: [
           {
@@ -193,20 +173,16 @@ export const fetchWorkshopsFromNotion = async (): Promise<NotionWorkshop[]> => {
 };
 
 export const addWorkshopToNotion = async (workshop: Omit<NotionWorkshop, 'id'>): Promise<boolean> => {
-  if (!NOTION_API_KEY || !WORKSHOPS_DATABASE_ID) {
-    console.warn('Notion API key or database ID not configured');
-    return false;
-  }
+  console.log('Adding workshop to Notion via Netlify Functions...');
 
   try {
     // Use Netlify Functions to call Notion API
-    const response = await fetch(`${API_BASE_URL}/notion-pages`, {
+    const response = await fetch(`${API_BASE_URL}/notion-add-workshop`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        parent: { database_id: WORKSHOPS_DATABASE_ID },
         properties: {
           Title: {
             title: [
