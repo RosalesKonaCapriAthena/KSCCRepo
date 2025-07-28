@@ -65,22 +65,23 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // Clean and format database ID
+    // Extract the correct database ID from the environment variable
     let formattedDatabaseId = WORKSHOPS_DATABASE_ID;
     
-    // Remove any query parameters or extra characters
+    // Remove any query parameters
     formattedDatabaseId = formattedDatabaseId.split('?')[0];
     
-    // Remove any quotes that might be present
+    // Remove any quotes
     formattedDatabaseId = formattedDatabaseId.replace(/"/g, '');
     
-    // If it's longer than 36 characters (UUID length), truncate it
+    // If the ID is duplicated, extract just the first UUID
     if (formattedDatabaseId.length > 36) {
-      formattedDatabaseId = formattedDatabaseId.substring(0, 36);
-    }
-    
-    // Add hyphens if they don't exist
-    if (!formattedDatabaseId.includes('-')) {
+      // Take only the first 32 characters (without hyphens)
+      const firstPart = formattedDatabaseId.substring(0, 32);
+      // Add hyphens to make it a proper UUID
+      formattedDatabaseId = firstPart.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
+    } else if (formattedDatabaseId.length === 32 && !formattedDatabaseId.includes('-')) {
+      // If it's exactly 32 characters without hyphens, add them
       formattedDatabaseId = formattedDatabaseId.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
     }
     
