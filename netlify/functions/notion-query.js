@@ -81,8 +81,10 @@ exports.handler = async (event, context) => {
 
     console.log('Making Notion API call with database ID:', formattedDatabaseId);
     
+    // Try a simple query without any filters first
     const response = await notion.databases.query({
       database_id: formattedDatabaseId,
+      page_size: 10, // Limit to 10 results for testing
     });
     
     console.log('Notion API response received');
