@@ -107,7 +107,7 @@ const About = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    5K+
+                    N/A
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Students Served</p>
@@ -116,7 +116,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    175K+
+                    N/A
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Hours of Tutoring</p>
@@ -125,7 +125,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    94%
+                    N/A
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Parent Satisfaction</p>
@@ -134,7 +134,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    86%
+                    N/A
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Academic Improvement</p>

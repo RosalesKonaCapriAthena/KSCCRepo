@@ -70,15 +70,16 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="bg-gray-50 py-20 relative overflow-hidden">
-        {/* Subtle background elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-3 h-3 bg-indigo-400 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
-          <div className="absolute bottom-32 left-40 w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></div>
-          <div className="absolute top-60 right-20 w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce"></div>
-          <div className="absolute top-80 left-60 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-60 right-60 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce"></div>
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=1920')`
+          }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -86,73 +87,39 @@ const Home = () => {
             {/* Left Column - Text Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                  KSCC
+                <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+                  Enabling the next
                   <br />
                   <span className="text-[#4338ca]">
-                    Nexel
+                    generation of STEM leaders
                   </span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                  A STEM-based tutoring organization hosted by the Koreatown Senior and Community Center, we strive to support young students from underprivileged and low-income backgrounds.
+                <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
+                  Join us in making STEM a top priority in our schools.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/tutors"
+                  to="/donate"
                   className="group bg-[#4338ca] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
                 >
-                  Volunteer as a Tutor
+                  Make a tax-free donation
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/families"
-                  className="group bg-white text-[#4338ca] px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 border-2 border-[#4338ca] hover:border-[#3730a3] flex items-center justify-center"
+                  to="/tutors"
+                  className="group bg-transparent text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 border-2 border-white hover:border-gray-200 flex items-center justify-center"
                 >
-                  Sign Up a Student
+                  Join the team
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
-            {/* Right Column - Visual Element */}
-            <div className="relative">
-              <div className="relative bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
-                {/* Main image placeholder */}
-                <div className="relative">
-                  <div className="w-full h-80 bg-gray-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    <div className="text-center relative z-10">
-                      <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                        <UserGroupIcon className="w-12 h-12 text-[#4338ca]" />
-                      </div>
-                      <p className="text-[#4338ca] font-medium">Student Success Story</p>
-                    </div>
-                    
-                    {/* Subtle background elements */}
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="absolute top-4 left-4 w-8 h-8 bg-yellow-300 rounded-full animate-bounce"></div>
-                      <div className="absolute top-8 right-8 w-6 h-6 bg-blue-300 rounded-full animate-pulse"></div>
-                      <div className="absolute bottom-8 left-8 w-10 h-10 bg-green-300 rounded-full animate-bounce"></div>
-                      <div className="absolute bottom-4 right-4 w-4 h-4 bg-purple-300 rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Floating educational elements */}
-                  <div className="absolute -top-4 -right-4 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg animate-bounce">4</div>
-                  <div className="absolute top-8 -left-6 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg animate-pulse">9</div>
-                  <div className="absolute bottom-8 -right-8 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce">2</div>
-                  <div className="absolute -bottom-4 left-8 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg animate-pulse">7</div>
-                  
-                  {/* Laptop icons */}
-                  <div className="absolute top-16 right-16 w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center shadow-lg animate-pulse">
-                    <div className="w-4 h-4 bg-white rounded-sm"></div>
-                  </div>
-                  <div className="absolute bottom-16 left-16 w-6 h-6 bg-orange-500 rounded-lg flex items-center justify-center shadow-lg animate-bounce">
-                    <div className="w-3 h-3 bg-white rounded-sm"></div>
-                  </div>
-                </div>
-              </div>
+            {/* Right Column - Empty for now to let background image show through */}
+            <div className="hidden lg:block">
+              {/* This space allows the background image to be visible on the right side */}
             </div>
           </div>
         </div>
@@ -182,19 +149,19 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">175K+</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
               <div className="text-gray-600 text-sm font-medium">Hours of tutoring delivered</div>
             </div>
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">5K+</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
               <div className="text-gray-600 text-sm font-medium">Students served</div>
             </div>
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">94%</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
               <div className="text-gray-600 text-sm font-medium">Parent satisfaction</div>
             </div>
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">86%</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
               <div className="text-gray-600 text-sm font-medium">Teachers report improved academic outcomes</div>
             </div>
           </div>

@@ -5,42 +5,42 @@ const Impact = () => {
   const stats = [
     {
       icon: Users,
-      number: '500+',
+      number: 'N/A',
       label: 'Students Helped',
       description: 'Students have received tutoring support',
       color: 'bg-blue-600'
     },
     {
       icon: Users,
-      number: '75',
+      number: 'N/A',
       label: 'Active Tutors',
       description: 'Dedicated volunteers in our program',
       color: 'bg-green-600'
     },
     {
       icon: Clock,
-      number: '2,500+',
+      number: 'N/A',
       label: 'Volunteer Hours',
       description: 'Hours donated by our tutors',
       color: 'bg-orange-600'
     },
     {
       icon: Award,
-      number: '95%',
+      number: 'N/A',
       label: 'Success Rate',
       description: 'Students show improved grades',
       color: 'bg-purple-600'
     },
     {
       icon: TrendingUp,
-      number: '40+',
+      number: 'N/A',
       label: 'Workshops Held',
       description: 'STEM workshops completed',
       color: 'bg-pink-600'
     },
     {
       icon: Star,
-      number: '4.9/5',
+      number: 'N/A',
       label: 'Program Rating',
       description: 'Average satisfaction score',
       color: 'bg-indigo-600'
