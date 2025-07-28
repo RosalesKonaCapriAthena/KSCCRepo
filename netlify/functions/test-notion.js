@@ -38,6 +38,13 @@ exports.handler = async (event, context) => {
       auth: process.env.VITE_NOTION_API_KEY,
     });
 
+    // Debug: Log the raw environment variable
+    console.log('Raw environment variable:', {
+      value: process.env.VITE_WORKSHOPS_DATABASE_ID,
+      length: process.env.VITE_WORKSHOPS_DATABASE_ID ? process.env.VITE_WORKSHOPS_DATABASE_ID.length : 0,
+      type: typeof process.env.VITE_WORKSHOPS_DATABASE_ID
+    });
+    
     // Clean and format database ID
     let databaseId = process.env.VITE_WORKSHOPS_DATABASE_ID;
     
@@ -47,20 +54,29 @@ exports.handler = async (event, context) => {
     // Remove any quotes that might be present
     databaseId = databaseId.replace(/"/g, '');
     
-    // If it's longer than 36 characters (UUID length), truncate it
+    // Check if it looks like a duplicated UUID and extract the first part
     if (databaseId.length > 36) {
-      databaseId = databaseId.substring(0, 36);
+      // Look for the pattern of a UUID (8-4-4-4-12 characters)
+      const uuidPattern = /([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/i;
+      const match = databaseId.match(uuidPattern);
+      if (match) {
+        databaseId = match[1];
+      } else {
+        // If no UUID pattern found, just take the first 36 characters
+        databaseId = databaseId.substring(0, 36);
+      }
     }
     
-    // Add hyphens if they don't exist
-    if (!databaseId.includes('-')) {
+    // Add hyphens if they don't exist and it's exactly 32 characters
+    if (databaseId.length === 32 && !databaseId.includes('-')) {
       databaseId = databaseId.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
     }
     
     console.log('Database ID processing:', {
       original: process.env.VITE_WORKSHOPS_DATABASE_ID,
       cleaned: databaseId,
-      length: databaseId.length
+      length: databaseId.length,
+      isValidUUID: /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(databaseId)
     });
 
     console.log('Testing Notion API with database ID:', databaseId);
