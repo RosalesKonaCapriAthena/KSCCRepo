@@ -4,26 +4,39 @@ import { sendContactEmail } from '../services/emailService';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    phone: '',
+    subject: '',
     message: ''
   });
 
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('=== FORM SUBMISSION STARTED ===');
     e.preventDefault();
     
     console.log('Contact form submitted with data:', formData);
     
+    // Test if the form submission is working at all
+    alert('Form submitted! Data: ' + JSON.stringify(formData));
+    
     try {
       console.log('Calling sendContactEmail...');
-      const success = await sendContactEmail(formData);
+      // Convert the form data to match the expected format
+      const contactData = {
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        message: `Subject: ${formData.subject}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+      };
+      const success = await sendContactEmail(contactData);
       console.log('sendContactEmail result:', success);
       
       if (success) {
         alert('Thank you for your message! We\'ll get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', subject: '', message: '' });
       } else {
         alert('There was an error sending your message. Please try again or contact us directly.');
       }
@@ -33,7 +46,7 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -104,20 +117,37 @@ const Contact = () => {
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Enter your full name"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="Enter your last name"
+                  />
+                </div>
               </div>
 
               <div>
@@ -134,6 +164,43 @@ const Contact = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="Enter your email address"
                 />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  Subject
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Tutoring Information">Tutoring Information</option>
+                  <option value="Volunteer Opportunities">Volunteer Opportunities</option>
+                  <option value="Workshop Information">Workshop Information</option>
+                  <option value="Donation">Donation</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
 
               <div>
@@ -154,6 +221,7 @@ const Contact = () => {
 
               <button
                 type="submit"
+                onClick={() => console.log('Button clicked!')}
                 className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-colors flex items-center justify-center"
               >
                 Send Message
