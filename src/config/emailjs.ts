@@ -5,7 +5,7 @@ export const EMAILJS_CONFIG = {
   SERVICE_ID: 'service_cufkpyn', // Your EmailJS service ID
   PUBLIC_KEY: 'rJ-PGhsv4JJVgorAk', // Your EmailJS public key
   TEMPLATE_ID: 'template_li046qn', // Your universal template ID
-  CONTACT_TEMPLATE_ID: 'YOUR_NEW_CONTACT_TEMPLATE_ID' // Your new contact template ID
+  CONTACT_TEMPLATE_ID: 'template_msy784h' // Your new contact template ID
 };
 
 // Instructions for setup:
