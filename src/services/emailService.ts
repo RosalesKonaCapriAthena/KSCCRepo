@@ -47,20 +47,32 @@ export const sendEmail = async (data: EmailData, formType: string): Promise<bool
 };
 
 // Specific email functions for different forms
-export const sendContactEmail = async (data: { name: string; email: string; message: string }): Promise<boolean> => {
+export const sendContactEmail = async (data: { name: string; email: string; phone?: string; subject?: string; message: string }): Promise<boolean> => {
   console.log('sendContactEmail called with data:', data);
   
-  // Convert the contact form data to match EmailData interface
-  const emailData: EmailData = {
-    name: data.name,
-    email: data.email,
-    message: data.message
-  };
-  
-  console.log('Converted emailData:', emailData);
-  const result = await sendEmail(emailData, 'Contact Form');
-  console.log('sendEmail result:', result);
-  return result;
+  try {
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      phone: data.phone || '',
+      subject: data.subject || '',
+      message: data.message
+    };
+
+    console.log('Contact template params:', templateParams);
+
+    const response = await emailjs.send(
+      EMAILJS_CONFIG.SERVICE_ID,
+      EMAILJS_CONFIG.CONTACT_TEMPLATE_ID,
+      templateParams
+    );
+
+    console.log('Contact email sent successfully:', response);
+    return true;
+  } catch (error) {
+    console.error('Error sending contact email:', error);
+    return false;
+  }
 };
 
 export const sendTutorApplicationEmail = async (data: EmailData): Promise<boolean> => {

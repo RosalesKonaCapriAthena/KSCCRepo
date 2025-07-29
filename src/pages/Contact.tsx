@@ -25,11 +25,13 @@ const Contact = () => {
     
     try {
       console.log('Calling sendContactEmail...');
-      // Convert the form data to match the expected format
+      // Pass all the form data directly
       const contactData = {
         name: `${formData.firstName} ${formData.lastName}`,
         email: formData.email,
-        message: `Subject: ${formData.subject}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message
       };
       const success = await sendContactEmail(contactData);
       console.log('sendContactEmail result:', success);
