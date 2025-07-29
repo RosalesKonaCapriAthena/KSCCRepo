@@ -394,7 +394,7 @@ const Home = () => {
                 Support our mission by becoming a sponsor or partner organization to help us reach more students.
               </p>
               <Link
-                to="/donate"
+                to="/contact"
                 className="group inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Support Our Mission

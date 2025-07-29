@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   PhoneIcon,
   EnvelopeIcon,
@@ -10,8 +10,56 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline';
 import { Sparkles } from 'lucide-react';
+import { sendContactEmail } from '../services/emailService';
 
 const Donate = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const contactData = {
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message
+      };
+      
+      const success = await sendContactEmail(contactData);
+      
+      if (success) {
+        alert('Thank you for your message! We\'ll get back to you soon.');
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        alert('There was an error sending your message. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
@@ -151,22 +199,30 @@ const Donate = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                     <input
                       type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300"
                       placeholder="Enter your first name"
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                     <input
                       type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300"
                       placeholder="Enter your last name"
+                      required
                     />
                   </div>
                 </div>
@@ -175,8 +231,12 @@ const Donate = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300"
                     placeholder="Enter your email address"
+                    required
                   />
                 </div>
 
@@ -184,6 +244,9 @@ const Donate = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300"
                     placeholder="Enter your phone number"
                   />
@@ -191,31 +254,42 @@ const Donate = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300">
-                    <option>Select a subject</option>
-                    <option>General Inquiry</option>
-                    <option>Volunteer Information</option>
-                    <option>Tutoring Services</option>
-                    <option>Donation/Support</option>
-                    <option>Partnership Opportunities</option>
-                    <option>Other</option>
+                  <select 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300"
+                    required
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Volunteer Information">Volunteer Information</option>
+                    <option value="Tutoring Services">Tutoring Services</option>
+                    <option value="Donation/Support">Donation/Support</option>
+                    <option value="Partnership Opportunities">Partnership Opportunities</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4338ca] focus:border-transparent transition-all duration-300"
                     placeholder="Tell us how we can help you..."
+                    required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#4338ca] text-white py-4 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#4338ca] text-white py-4 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>

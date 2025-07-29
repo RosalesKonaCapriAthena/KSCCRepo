@@ -7,8 +7,9 @@ import About from './pages/About';
 import Families from './pages/Families';
 import Tutors from './pages/Tutors';
 import Workshops from './pages/Schools';
-import Contact from './pages/Donate';
+import Donate from './pages/Donate';
 import SignIn from './pages/SignIn';
+import Test from './pages/Test';
 import GetInvolved from './pages/GetInvolved';
 import Impact from './pages/Impact';
 
@@ -24,12 +25,12 @@ function App() {
             <Route path="/families" element={<Families />} />
             <Route path="/tutors" element={<Tutors />} />
             <Route path="/schools" element={<Workshops />} />
-            <Route path="/donate" element={<Contact />} />
+            <Route path="/contact" element={<Donate />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/impact" element={<Impact />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </main>
         <Footer />

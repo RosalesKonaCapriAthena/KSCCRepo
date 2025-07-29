@@ -10,7 +10,7 @@ const Navigation = () => {
     { name: 'STUDENTS', path: '/families' },
     { name: 'TUTORS', path: '/tutors' },
     { name: 'WORKSHOPS', path: '/schools' },
-    { name: 'CONTACT', path: '/donate' },
+    { name: 'CONTACT', path: '/contact' },
     { name: 'ABOUT US', path: '/about' },
   ];
 
