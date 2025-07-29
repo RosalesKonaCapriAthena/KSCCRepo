@@ -14,8 +14,12 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    console.log('Contact form submitted with data:', formData);
+    
     try {
+      console.log('Calling sendContactEmail...');
       const success = await sendContactEmail(formData);
+      console.log('sendContactEmail result:', success);
       
       if (success) {
         alert('Thank you for your message! We\'ll get back to you soon.');

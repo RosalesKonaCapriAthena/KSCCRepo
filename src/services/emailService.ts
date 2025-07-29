@@ -15,6 +15,9 @@ export interface EmailData {
 }
 
 export const sendEmail = async (data: EmailData, formType: string): Promise<boolean> => {
+  console.log('sendEmail called with:', { data, formType });
+  console.log('EMAILJS_CONFIG:', EMAILJS_CONFIG);
+  
   try {
     const templateParams = {
       form_type: formType,
@@ -26,6 +29,8 @@ export const sendEmail = async (data: EmailData, formType: string): Promise<bool
       hours_available: data.hoursAvailable || '',
       grade_level: data.gradeLevel || '',
     };
+
+    console.log('Template params:', templateParams);
 
     const response = await emailjs.send(
       EMAILJS_CONFIG.SERVICE_ID,
@@ -43,13 +48,19 @@ export const sendEmail = async (data: EmailData, formType: string): Promise<bool
 
 // Specific email functions for different forms
 export const sendContactEmail = async (data: { name: string; email: string; message: string }): Promise<boolean> => {
+  console.log('sendContactEmail called with data:', data);
+  
   // Convert the contact form data to match EmailData interface
   const emailData: EmailData = {
     name: data.name,
     email: data.email,
     message: data.message
   };
-  return sendEmail(emailData, 'Contact Form');
+  
+  console.log('Converted emailData:', emailData);
+  const result = await sendEmail(emailData, 'Contact Form');
+  console.log('sendEmail result:', result);
+  return result;
 };
 
 export const sendTutorApplicationEmail = async (data: EmailData): Promise<boolean> => {
