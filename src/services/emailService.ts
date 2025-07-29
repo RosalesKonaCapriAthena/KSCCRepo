@@ -49,6 +49,7 @@ export const sendEmail = async (data: EmailData, formType: string): Promise<bool
 // Specific email functions for different forms
 export const sendContactEmail = async (data: { name: string; email: string; phone?: string; subject?: string; message: string }): Promise<boolean> => {
   console.log('sendContactEmail called with data:', data);
+  console.log('EMAILJS_CONFIG:', EMAILJS_CONFIG);
   
   try {
     const templateParams = {
@@ -60,6 +61,9 @@ export const sendContactEmail = async (data: { name: string; email: string; phon
     };
 
     console.log('Contact template params:', templateParams);
+    console.log('About to call emailjs.send with:');
+    console.log('- Service ID:', EMAILJS_CONFIG.SERVICE_ID);
+    console.log('- Template ID:', EMAILJS_CONFIG.CONTACT_TEMPLATE_ID);
 
     const response = await emailjs.send(
       EMAILJS_CONFIG.SERVICE_ID,
@@ -71,6 +75,7 @@ export const sendContactEmail = async (data: { name: string; email: string; phon
     return true;
   } catch (error) {
     console.error('Error sending contact email:', error);
+    console.error('Error details:', JSON.stringify(error));
     return false;
   }
 };

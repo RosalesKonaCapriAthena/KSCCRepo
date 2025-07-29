@@ -33,6 +33,7 @@ const Contact = () => {
         subject: formData.subject,
         message: formData.message
       };
+      console.log('Contact data being sent:', contactData);
       const success = await sendContactEmail(contactData);
       console.log('sendContactEmail result:', success);
       
@@ -44,7 +45,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error sending your message. Please try again or contact us directly.');
+      alert('Error details: ' + error);
     }
   };
 
