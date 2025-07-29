@@ -3,6 +3,8 @@ import { Mail, Phone, MapPin, Send, HelpCircle, ChevronDown, ChevronUp } from 'l
 import { sendContactEmail } from '../services/emailService';
 
 const Contact = () => {
+  console.log('Contact component loaded!');
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -224,7 +226,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                onClick={() => console.log('Button clicked!')}
+                onClick={() => {
+                  console.log('Button clicked!');
+                  alert('Button was clicked!');
+                }}
                 className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-colors flex items-center justify-center"
               >
                 Send Message
