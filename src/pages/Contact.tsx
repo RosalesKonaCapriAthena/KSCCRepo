@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
-import { sendContactEmail } from '../services/emailService';
+// import { sendContactEmail } from '../services/emailService';
 
 const Contact = () => {
   console.log('Contact component loaded!');
@@ -36,15 +36,15 @@ const Contact = () => {
         message: formData.message
       };
       console.log('Contact data being sent:', contactData);
-      const success = await sendContactEmail(contactData);
-      console.log('sendContactEmail result:', success);
+      // const success = await sendContactEmail(contactData);
+      // console.log('sendContactEmail result:', success);
       
-      if (success) {
+      // if (success) {
         alert('Thank you for your message! We\'ll get back to you soon.');
         setFormData({ firstName: '', lastName: '', email: '', phone: '', subject: '', message: '' });
-      } else {
-        alert('There was an error sending your message. Please try again or contact us directly.');
-      }
+      // } else {
+      //   alert('There was an error sending your message. Please try again or contact us directly.');
+      // }
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Error details: ' + error);
