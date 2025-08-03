@@ -107,38 +107,29 @@ const About = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    N/A
+                    100+
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Students Served</p>
-                    <p className="text-sm text-gray-600">Since our founding</p>
+                    <p className="text-sm text-gray-600">Since our founding in 2018</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    N/A
+                    65+
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Hours of Tutoring</p>
-                    <p className="text-sm text-gray-600">Delivered to students</p>
+                    <p className="font-semibold text-gray-900">Volunteer Tutors</p>
+                    <p className="text-sm text-gray-600">Dedicated to student success</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    N/A
+                    5+
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Parent Satisfaction</p>
-                    <p className="text-sm text-gray-600">Rate from surveys</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-[#4338ca] text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    N/A
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Academic Improvement</p>
-                    <p className="text-sm text-gray-600">Reported by teachers</p>
+                    <p className="font-semibold text-gray-900">Years of Service</p>
+                    <p className="text-sm text-gray-600">Serving the community</p>
                   </div>
                 </div>
               </div>
