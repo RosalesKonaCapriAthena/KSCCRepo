@@ -22,13 +22,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/families" element={<Families />} />
+            <Route path="/students" element={<Families />} />
             <Route path="/tutors" element={<Tutors />} />
-            <Route path="/schools" element={<Workshops />} />
+            <Route path="/workshops" element={<Workshops />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/get-involved" element={<GetInvolved />} />
-            <Route path="/workshops" element={<Workshops />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/test" element={<Test />} />
           </Routes>

@@ -212,42 +212,42 @@ const Tutors = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
+            <div className="text-center flex flex-col h-full">
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Submit Your Application</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 flex-grow">
                 Fill out our quick online form with your background, subjects you can tutor, and availability.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center flex flex-col h-full">
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Complete a Background Check</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 flex-grow">
                 For the safety of our students, all tutors must pass a standard background check before starting.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center flex flex-col h-full">
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Attend Orientation & Training</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 flex-grow">
                 Join our short orientation session to learn about Nexel's mission, tutoring expectations, and how to track your volunteer hours.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center flex flex-col h-full">
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Start Tutoring!</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 flex-grow">
                 Once approved, you'll be matched with students and can begin tutoring — helping kids succeed in STEM and beyond.
               </p>
             </div>

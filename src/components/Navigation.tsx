@@ -7,9 +7,9 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'STUDENTS', path: '/families' },
+    { name: 'STUDENTS', path: '/students' },
     { name: 'TUTORS', path: '/tutors' },
-    { name: 'WORKSHOPS', path: '/schools' },
+    { name: 'WORKSHOPS', path: '/workshops' },
     { name: 'CONTACT', path: '/contact' },
     { name: 'ABOUT US', path: '/about' },
   ];

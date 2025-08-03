@@ -108,7 +108,7 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/families"
+                  to="/students"
                   className="group bg-transparent text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 border-2 border-white hover:border-gray-200 flex items-center justify-center"
                 >
                   Sign Up a Student
@@ -228,7 +228,7 @@ const Home = () => {
                       <span>{formatDate(workshop.date)}</span>
                     </div>
                     <Link
-                      to="/schools"
+                      to="/workshops"
                       className="group inline-flex items-center bg-[#4338ca] hover:bg-[#3730a3] text-white px-4 py-2 rounded-xl font-medium transition-all duration-300 transform hover:scale-105"
                     >
                       Learn More
@@ -251,7 +251,7 @@ const Home = () => {
 
           <div className="text-center">
             <Link
-              to="/schools"
+              to="/workshops"
               className="group inline-flex items-center bg-[#4338ca] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View All Workshops
@@ -299,7 +299,7 @@ const Home = () => {
               </div>
 
               <Link
-                to="/families"
+                to="/students"
                 className="group inline-flex items-center bg-[#4338ca] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Request a Tutor
@@ -377,7 +377,7 @@ const Home = () => {
                 Request free one-on-one support from our qualified volunteer tutors in any subject.
               </p>
               <Link
-                to="/families"
+                to="/students"
                 className="group inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Request Tutoring
