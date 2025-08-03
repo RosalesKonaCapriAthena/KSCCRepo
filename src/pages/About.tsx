@@ -320,12 +320,12 @@ const About = () => {
 
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
               <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-2xl font-bold text-[#4338ca]">L</span>
+                <span className="text-2xl font-bold text-[#4338ca]">C</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Angela's Sister</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Chloe Park</h3>
               <p className="text-[#4338ca] font-semibold mb-4">Secretary</p>
               <p className="text-gray-600 text-sm">
-                Lisa recruits and trains our amazing volunteer tutors who make our programs possible.
+                Chloe recruits and trains our amazing volunteer tutors who make our programs possible.
               </p>
             </div>
           </div>

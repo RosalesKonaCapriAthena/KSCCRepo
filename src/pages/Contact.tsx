@@ -250,9 +250,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Visit Us</h3>
                     <p className="text-gray-600">
-                      Koreatown Community Center<br />
-                      123 S. Western Ave<br />
-                      Los Angeles, CA 90020
+                      Koreatown Senior & Community Center<br />
+                      Los Angeles, CA
                     </p>
                   </div>
                 </div>
@@ -263,7 +262,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
-                    <p className="text-gray-600">(213) 555-0123</p>
+                    <p className="text-gray-600">213-800-1588</p>
                     <p className="text-gray-500 text-sm">Monday - Friday: 9 AM - 6 PM</p>
                   </div>
                 </div>
@@ -274,7 +273,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
-                    <p className="text-gray-600">info@kccspark.org</p>
+                    <p className="text-gray-600">kscctutoring@gmail.com</p>
                     <p className="text-gray-500 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -343,7 +342,7 @@ const Contact = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <a
-              href="mailto:info@kccspark.org"
+              href="mailto:kscctutoring@gmail.com"
               className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
             >
               Email Us Directly

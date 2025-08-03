@@ -216,9 +216,9 @@ const Tutors = () => {
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Apply Online</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Submit Your Application</h3>
               <p className="text-gray-600">
-                Fill out our simple application form with your background and availability.
+                Fill out our quick online form with your background, subjects you can tutor, and availability.
               </p>
             </div>
 
@@ -226,9 +226,9 @@ const Tutors = () => {
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Background Check</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Complete a Background Check</h3>
               <p className="text-gray-600">
-                Complete a background check to ensure student safety.
+                For the safety of our students, all tutors must pass a standard background check before starting.
               </p>
             </div>
 
@@ -236,9 +236,9 @@ const Tutors = () => {
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Training</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Attend Orientation & Training</h3>
               <p className="text-gray-600">
-                Complete our comprehensive tutor training program.
+                Join our short orientation session to learn about Nexel's mission, tutoring expectations, and how to track your volunteer hours.
               </p>
             </div>
 
@@ -246,9 +246,9 @@ const Tutors = () => {
               <div className="bg-[#4338ca]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-[#4338ca]">4</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Start Tutoring</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Start Tutoring!</h3>
               <p className="text-gray-600">
-                Begin working with students and making a difference!
+                Once approved, you'll be matched with students and can begin tutoring — helping kids succeed in STEM and beyond.
               </p>
             </div>
           </div>
@@ -417,11 +417,11 @@ const Tutors = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="flex items-center justify-center space-x-3 text-white">
               <PhoneIcon className="w-6 h-6" />
-              <span>(213) 555-0123</span>
+              <span>213-800-1588</span>
             </div>
             <div className="flex items-center justify-center space-x-3 text-white">
               <EnvelopeIcon className="w-6 h-6" />
-              <span>volunteer@ksccnexel.org</span>
+              <span>kscctutoring@gmail.com</span>
             </div>
             <div className="flex items-center justify-center space-x-3 text-white">
               <MapPinIcon className="w-6 h-6" />
@@ -431,14 +431,14 @@ const Tutors = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+12135550123"
+              href="tel:+12138001588"
               className="group inline-flex items-center bg-white text-[#4338ca] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <PhoneIcon className="w-5 h-5 mr-2" />
               Call to Volunteer
             </a>
             <a
-              href="mailto:volunteer@ksccnexel.org"
+              href="mailto:kscctutoring@gmail.com"
               className="group inline-flex items-center bg-white bg-opacity-20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105 border border-white"
             >
               <EnvelopeIcon className="w-5 h-5 mr-2" />

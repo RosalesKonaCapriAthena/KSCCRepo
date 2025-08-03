@@ -95,7 +95,7 @@ const Home = () => {
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                  A STEM-based tutoring organization hosted by the Koreatown Senior and Community Center, we strive to support young students from underprivileged and low-income backgrounds.
+                  Nexel is a STEM-based tutoring initiative under the Koreatown Senior and Community Center, a 501(c)(3) nonprofit serving the LA community, dedicated to providing academic support to students from underprivileged and low-income backgrounds.
                 </p>
               </div>
               
@@ -149,20 +149,20 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
-              <div className="text-gray-600 text-sm font-medium">Hours of tutoring delivered</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">2018</div>
+              <div className="text-gray-600 text-sm font-medium">Program Started</div>
             </div>
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
-              <div className="text-gray-600 text-sm font-medium">Students served</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">100+</div>
+              <div className="text-gray-600 text-sm font-medium">Students Served</div>
             </div>
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
-              <div className="text-gray-600 text-sm font-medium">Parent satisfaction</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">65+</div>
+              <div className="text-gray-600 text-sm font-medium">Volunteer Tutors</div>
             </div>
             <div className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">N/A</div>
-              <div className="text-gray-600 text-sm font-medium">Teachers report improved academic outcomes</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#4338ca] mb-2">5+</div>
+              <div className="text-gray-600 text-sm font-medium">Years of Service</div>
             </div>
           </div>
         </div>
