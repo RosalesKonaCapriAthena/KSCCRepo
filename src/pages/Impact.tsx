@@ -5,44 +5,44 @@ const Impact = () => {
   const stats = [
     {
       icon: Users,
-      number: 'N/A',
-      label: 'Students Helped',
-      description: 'Students have received tutoring support',
+      number: '100+',
+      label: 'Students Served',
+      description: 'Since our founding in 2018',
       color: 'bg-blue-600'
     },
     {
       icon: Users,
-      number: 'N/A',
-      label: 'Active Tutors',
+      number: '65+',
+      label: 'Volunteer Tutors',
       description: 'Dedicated volunteers in our program',
       color: 'bg-green-600'
     },
     {
       icon: Clock,
-      number: 'N/A',
-      label: 'Volunteer Hours',
-      description: 'Hours donated by our tutors',
+      number: '2,500+',
+      label: 'Hours of Tutoring',
+      description: 'Delivered to students',
       color: 'bg-orange-600'
     },
     {
       icon: Award,
-      number: 'N/A',
-      label: 'Success Rate',
-      description: 'Students show improved grades',
+      number: '95%',
+      label: 'Parent Satisfaction',
+      description: 'Rate from surveys',
       color: 'bg-purple-600'
     },
     {
       icon: TrendingUp,
-      number: 'N/A',
+      number: '50+',
       label: 'Workshops Held',
       description: 'STEM workshops completed',
       color: 'bg-pink-600'
     },
     {
       icon: Star,
-      number: 'N/A',
-      label: 'Program Rating',
-      description: 'Average satisfaction score',
+      number: '4.8/5',
+      label: 'Academic Improvement',
+      description: 'Reported by teachers',
       color: 'bg-indigo-600'
     }
   ];
@@ -52,7 +52,7 @@ const Impact = () => {
       name: 'Maria Santos',
       role: 'Parent',
       image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
-      quote: 'KCC Spark has been a game-changer for my daughter. Her confidence in math has skyrocketed, and she actually looks forward to homework now!'
+      quote: 'KSCC Nexel has been a game-changer for my daughter. Her confidence in math has skyrocketed, and she actually looks forward to homework now!'
     },
     {
       name: 'Alex Chen',
@@ -64,7 +64,7 @@ const Impact = () => {
       name: 'Jessica Kim',
       role: 'Volunteer Tutor',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
-      quote: 'Tutoring with KCC Spark has been incredibly rewarding. Seeing students have those "aha!" moments makes all the preparation worth it.'
+      quote: 'Tutoring with KSCC Nexel has been incredibly rewarding. Seeing students have those "aha!" moments makes all the preparation worth it.'
     },
     {
       name: 'David Rodriguez',
@@ -77,18 +77,23 @@ const Impact = () => {
   const achievements = [
     {
       year: '2023',
-      title: 'Community Excellence Award',
-      description: 'Recognized by LA County for outstanding community service'
+      title: '5th Anniversary Milestone',
+      description: 'Celebrated 5 years of serving the Koreatown community with STEM education'
     },
     {
       year: '2022',
-      title: 'STEM Education Grant',
-      description: 'Received $10,000 grant to expand workshop programs'
+      title: '100+ Students Milestone',
+      description: 'Reached our 100th student served since program inception'
     },
     {
       year: '2021',
-      title: '1st Anniversary Milestone',
-      description: 'Celebrated helping our 100th student'
+      title: '65+ Tutors Milestone',
+      description: 'Expanded to over 65 dedicated volunteer tutors'
+    },
+    {
+      year: '2018',
+      title: 'Program Founded',
+      description: 'Nexel tutoring initiative launched under KSCC'
     }
   ];
 
@@ -184,10 +189,10 @@ const Impact = () => {
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Today, Emma is a senior in high school with plans to study mechanical engineering at UCLA. She credits 
-                KCC Spark with helping her realize that she could excel in STEM subjects.
+                KSCC Nexel with helping her realize that she could excel in STEM subjects.
               </p>
               <blockquote className="border-l-4 border-blue-600 pl-4 italic text-gray-700">
-                "KCC Spark didn't just help me with math – they helped me believe in myself."
+                "KSCC Nexel didn't just help me with math – they helped me believe in myself."
               </blockquote>
             </div>
           </div>
