@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
-// import { sendContactEmail } from '../services/emailService';
+import { sendContactEmail } from '../services/emailService';
 
 const Donate = () => {
   console.log('Donate component loaded!');
@@ -22,9 +22,6 @@ const Donate = () => {
     
     console.log('Contact form submitted with data:', formData);
     
-    // Test if the form submission is working at all
-    alert('Form submitted! Data: ' + JSON.stringify(formData));
-    
     try {
       console.log('Calling sendContactEmail...');
       // Pass all the form data directly
@@ -36,18 +33,18 @@ const Donate = () => {
         message: formData.message
       };
       console.log('Contact data being sent:', contactData);
-      // const success = await sendContactEmail(contactData);
-      // console.log('sendContactEmail result:', success);
+      const success = await sendContactEmail(contactData);
+      console.log('sendContactEmail result:', success);
       
-      // if (success) {
+      if (success) {
         alert('Thank you for your message! We\'ll get back to you soon.');
         setFormData({ firstName: '', lastName: '', email: '', phone: '', subject: '', message: '' });
-      // } else {
-      //   alert('There was an error sending your message. Please try again or contact us directly.');
-      // }
+      } else {
+        alert('There was an error sending your message. Please try again or contact us directly.');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error details: ' + error);
+      alert('There was an error sending your message. Please try again or contact us directly.');
     }
   };
 
@@ -225,11 +222,7 @@ const Donate = () => {
 
               <button
                 type="submit"
-                onClick={() => {
-                  console.log('Button clicked!');
-                  alert('Button was clicked!');
-                }}
-                className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-colors flex items-center justify-center"
+                className="w-full bg-[#4338ca] text-white py-4 px-6 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
               >
                 Send Message
                 <Send className="ml-2 h-5 w-5" />
@@ -342,7 +335,7 @@ const Donate = () => {
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <a
               href="mailto:kscctutoring@gmail.com"
-              className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center bg-[#4338ca] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#3730a3] transition-all duration-300 transform hover:scale-105"
             >
               Email Us Directly
               <Mail className="ml-2 h-5 w-5" />
