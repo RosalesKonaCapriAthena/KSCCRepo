@@ -7,7 +7,7 @@ import About from './pages/About';
 import Families from './pages/Families';
 import Tutors from './pages/Tutors';
 import Workshops from './pages/Schools';
-import Donate from './pages/Donate';
+import Contact from './pages/Contact';
 import SignIn from './pages/SignIn';
 import Test from './pages/Test';
 import GetInvolved from './pages/GetInvolved';
@@ -25,7 +25,7 @@ function App() {
             <Route path="/families" element={<Families />} />
             <Route path="/tutors" element={<Tutors />} />
             <Route path="/schools" element={<Workshops />} />
-            <Route path="/contact" element={<Donate />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/workshops" element={<Workshops />} />

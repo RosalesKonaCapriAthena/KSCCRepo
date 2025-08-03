@@ -81,7 +81,7 @@ const Contact = () => {
     },
     {
       question: 'Where do tutoring sessions take place?',
-      answer: 'Most sessions take place at the Koreatown Community Center, which provides a safe and conducive learning environment. We also offer online tutoring sessions for students who prefer virtual learning or have transportation challenges.'
+      answer: 'Most sessions take place at the Koreatown Senior & Community Center, which provides a safe and conducive learning environment. We also offer online tutoring sessions for students who prefer virtual learning or have transportation challenges.'
     },
     {
       question: 'How do I sign up my child for tutoring?',
@@ -203,7 +203,7 @@ const Contact = () => {
                   <option value="Tutoring Information">Tutoring Information</option>
                   <option value="Volunteer Opportunities">Volunteer Opportunities</option>
                   <option value="Workshop Information">Workshop Information</option>
-                  <option value="Donation">Donation</option>
+
                   <option value="Other">Other</option>
                 </select>
               </div>

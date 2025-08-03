@@ -11,15 +11,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-[#4338ca]" />
-                <span className="text-gray-600">Koreatown Community Center</span>
+                <span className="text-gray-600">Koreatown Senior & Community Center</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-[#4338ca]" />
-                <span className="text-gray-600">(213) 555-0123</span>
+                <span className="text-gray-600">213-800-1588</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-[#4338ca]" />
-                <span className="text-gray-600">info@ksccnexel.org</span>
+                <span className="text-gray-600">kscctutoring@gmail.com</span>
               </div>
             </div>
           </div>

@@ -136,7 +136,7 @@ const Workshops = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">When & Where?</h3>
               <p className="text-gray-600">
-                Weekends at the Koreatown Community Center. Check individual workshop details for specific times.
+                Weekends at the Koreatown Senior & Community Center. Check individual workshop details for specific times.
               </p>
             </div>
 

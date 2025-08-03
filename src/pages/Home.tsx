@@ -350,7 +350,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="group text-center bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 hover:border-[#4338ca]">
               <div className="w-16 h-16 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <AcademicCapIcon className="w-8 h-8 text-[#4338ca]" />
@@ -381,23 +381,6 @@ const Home = () => {
                 className="group inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Request Tutoring
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            <div className="group text-center bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 hover:border-purple-200">
-              <div className="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <HeartIcon className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">Sponsor / Partner</h3>
-              <p className="text-gray-600 mb-6">
-                Support our mission by becoming a sponsor or partner organization to help us reach more students.
-              </p>
-              <Link
-                to="/contact"
-                className="group inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Support Our Mission
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

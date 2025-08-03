@@ -163,7 +163,7 @@ const GetInvolved = () => {
               Contact Us
             </a>
             <a
-              href="mailto:info@kccspark.org"
+              href="mailto:kscctutoring@gmail.com"
               className="bg-white text-gray-900 border-2 border-gray-300 px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors"
             >
               Send Email

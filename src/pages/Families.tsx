@@ -520,11 +520,11 @@ const Families = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="flex items-center justify-center space-x-3 text-white">
               <PhoneIcon className="w-6 h-6" />
-              <span>(213) 555-0123</span>
+                              <span>213-800-1588</span>
             </div>
             <div className="flex items-center justify-center space-x-3 text-white">
               <EnvelopeIcon className="w-6 h-6" />
-              <span>info@ksccnexel.org</span>
+                              <span>kscctutoring@gmail.com</span>
             </div>
             <div className="flex items-center justify-center space-x-3 text-white">
               <MapPinIcon className="w-6 h-6" />
@@ -534,14 +534,14 @@ const Families = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+12135550123"
+              href="tel:+12138001588"
               className="group inline-flex items-center bg-white text-[#4338ca] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <PhoneIcon className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
             <a
-              href="mailto:info@ksccnexel.org"
+              href="mailto:kscctutoring@gmail.com"
               className="group inline-flex items-center bg-white bg-opacity-20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105 border border-white"
             >
               <EnvelopeIcon className="w-5 h-5 mr-2" />
