@@ -286,38 +286,43 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-2xl font-bold text-[#4338ca]">S</span>
+              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                <img src="https://res.cloudinary.com/dtitfokc2/image/upload/v1754484248/IMG_2012_u1rysq.jpg" alt="Angela Park" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Angela Park</h3>
-              <p className="text-[#4338ca] font-semibold mb-4">President</p>
-              <p className="text-gray-600 text-sm">
-                With over 15 years in education, Sarah leads our organization with passion and dedication to student success.
-              </p>
+              <p className="text-[#4338ca] font-semibold mb-2">President</p>
+              <p className="text-gray-600 text-sm">angelala800@gmail.com</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-2xl font-bold text-[#4338ca]">M</span>
+              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                {/* Replace with actual photo: <img src="/path/to/gavin-rosales-photo.jpg" alt="Gavin Rosales" className="w-full h-full object-cover" /> */}
+                <span className="text-2xl font-bold text-[#4338ca]">G</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Gavin Rosales</h3>
-              <p className="text-[#4338ca] font-semibold mb-4">Vice President</p>
-              <p className="text-gray-600 text-sm">
-                Michael oversees our tutoring programs and ensures every student receives the support they need.
-              </p>
+              <p className="text-[#4338ca] font-semibold mb-2">Vice President</p>
+              <p className="text-gray-600 text-sm">gavinrosales@icloud.com</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-2xl font-bold text-[#4338ca]">C</span>
+              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                <img src="https://res.cloudinary.com/dtitfokc2/image/upload/v1754484257/IMG_2013_hb3lpj.jpg" alt="Chloe Park" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Chloe Park</h3>
-              <p className="text-[#4338ca] font-semibold mb-4">Secretary</p>
-              <p className="text-gray-600 text-sm">
-                Chloe recruits and trains our amazing volunteer tutors who make our programs possible.
-              </p>
+              <p className="text-[#4338ca] font-semibold mb-2">Secretary</p>
+              <p className="text-gray-600 text-sm">kscctutoring@gmail.com</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+              <div className="w-24 h-24 bg-[#4338ca]/10 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                {/* Replace with actual photo: <img src="/path/to/treasurer-photo.jpg" alt="Treasurer Name" className="w-full h-full object-cover" /> */}
+                <span className="text-2xl font-bold text-[#4338ca]">T</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">N/A</h3>
+              <p className="text-[#4338ca] font-semibold mb-2">N/A</p>
+              <p className="text-gray-600 text-sm">kscctutoring@gmail.com</p>
             </div>
           </div>
         </div>

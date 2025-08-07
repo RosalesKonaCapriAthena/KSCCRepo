@@ -75,7 +75,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=1920')`
+            backgroundImage: `url('https://images.pexels.com/photos/6209796/pexels-photo-6209796.jpeg?auto=compress&cs=tinysrgb&w=1920')`
           }}
         >
           {/* Dark overlay for better text readability */}

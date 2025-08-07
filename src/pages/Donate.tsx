@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Star, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Star, Clock, Sparkles } from 'lucide-react';
 import { sendContactEmail } from '../services/emailService';
 
 const Donate = () => {
@@ -58,10 +58,10 @@ const Donate = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-[#4338ca]/10 text-[#4338ca] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
+            <Sparkles className="w-4 h-4 mr-2" />
             Get in Touch
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Have questions about our programs? Want to volunteer or support our mission? We'd love to hear from you. Reach out to us today.
           </p>
@@ -119,7 +119,7 @@ const Donate = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Hours</p>
-                    <p className="text-[#4338ca]">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 4:00 PM</p>
+                    <p className="text-[#4338ca]">Monday - Friday: 9:00 AM - 4:30 PM<br />Saturday & Sunday: Closed</p>
                   </div>
                 </div>
               </div>
