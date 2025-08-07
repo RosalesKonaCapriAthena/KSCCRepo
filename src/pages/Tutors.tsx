@@ -154,11 +154,9 @@ const Tutors = () => {
                     required
                   >
                     <option value="">Select your education level</option>
-                    <option value="High School Graduate">High School Graduate</option>
-                    <option value="Some College">Some College</option>
-                    <option value="Bachelor's Degree">Bachelor's Degree</option>
-                    <option value="Master's Degree">Master's Degree</option>
-                    <option value="PhD">PhD</option>
+                    <option value="High School Student">High School Student</option>
+                    <option value="College Student">College Student</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <div>
