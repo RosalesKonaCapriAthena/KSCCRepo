@@ -236,7 +236,7 @@ const Tutors = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Attend Orientation & Training</h3>
               <p className="text-gray-600 flex-grow">
-                Join our short orientation session to learn about Nexel's mission, tutoring expectations, and how to track your volunteer hours.
+                Join our short orientation session to learn about STEM Tutoring mission, tutoring expectations, and how to track your volunteer hours.
               </p>
             </div>
 

@@ -52,25 +52,25 @@ const Impact = () => {
       name: 'Maria Santos',
       role: 'Parent',
       image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
-      quote: 'KSCC Nexel has been a game-changer for my daughter. Her confidence in math has skyrocketed, and she actually looks forward to homework now!'
+      quote: '⚠️ PLACEHOLDER TESTIMONIAL - NOT A REAL QUOTE: The tutoring program has been incredibly helpful for my daughter\'s math skills and confidence.'
     },
     {
       name: 'Alex Chen',
       role: 'High School Student',
       image: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400',
-      quote: 'The chemistry workshops were amazing! I never thought I could understand molecular structures, but now I\'m considering majoring in chemistry.'
+      quote: '⚠️ PLACEHOLDER TESTIMONIAL - NOT A REAL QUOTE: The volunteer tutors helped me understand chemistry concepts I was struggling with.'
     },
     {
       name: 'Jessica Kim',
       role: 'Volunteer Tutor',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
-      quote: 'Tutoring with KSCC Nexel has been incredibly rewarding. Seeing students have those "aha!" moments makes all the preparation worth it.'
+      quote: '⚠️ PLACEHOLDER TESTIMONIAL - NOT A REAL QUOTE: Volunteering as a tutor has been rewarding and helped me give back to the community.'
     },
     {
       name: 'David Rodriguez',
       role: 'College Student',
       image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400',
-      quote: 'The programming workshop introduced me to coding, and now I\'m pursuing a computer science degree. Thank you for opening this door!'
+      quote: '⚠️ PLACEHOLDER TESTIMONIAL - NOT A REAL QUOTE: The workshops and tutoring support helped prepare me for college-level coursework.'
     }
   ];
 
@@ -93,7 +93,7 @@ const Impact = () => {
     {
       year: '2018',
       title: 'Program Founded',
-      description: 'Nexel tutoring initiative launched under KSCC'
+      description: 'STEM Tutoring initiative launched under KSCC'
     }
   ];
 
@@ -189,10 +189,10 @@ const Impact = () => {
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Today, Emma is a senior in high school with plans to study mechanical engineering at UCLA. She credits 
-                KSCC Nexel with helping her realize that she could excel in STEM subjects.
+                KSCC STEM Tutoring with helping her realize that she could excel in STEM subjects.
               </p>
               <blockquote className="border-l-4 border-blue-600 pl-4 italic text-gray-700">
-                "KSCC Nexel didn't just help me with math – they helped me believe in myself."
+                "⚠️ PLACEHOLDER QUOTE - NOT REAL: KSCC STEM Tutoring didn't just help me with math – they helped me believe in myself."
               </blockquote>
             </div>
           </div>

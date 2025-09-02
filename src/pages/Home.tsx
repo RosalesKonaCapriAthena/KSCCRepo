@@ -91,11 +91,11 @@ const Home = () => {
                   KSCC
                   <br />
                   <span className="text-[#4338ca]">
-                    Nexel
+                    STEM Tutoring
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                  Nexel is a STEM-based tutoring initiative under the Koreatown Senior and Community Center, a 501(c)(3) nonprofit serving the LA community, dedicated to providing academic support to students from underprivileged and low-income backgrounds.
+                  STEM Tutoring is a STEM-based tutoring initiative under the Koreatown Senior and Community Center, a 501(c)(3) nonprofit serving the LA community, dedicated to providing academic support to students from underprivileged and low-income backgrounds.
                 </p>
               </div>
               

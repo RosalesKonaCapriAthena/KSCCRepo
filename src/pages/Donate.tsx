@@ -253,7 +253,7 @@ const Donate = () => {
               <Star className="w-4 h-4 mr-2" />
               Support Our Mission
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ways to Support KSCC Nexel</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ways to Support KSCC STEM Tutoring</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               There are many ways you can help us continue our mission of providing free educational support to students.
             </p>
@@ -336,7 +336,7 @@ const Donate = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">KSCC Nexel</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h3>
               <p className="text-lg text-gray-600 mb-8">Koreatown Senior & Community Center<br />Los Angeles, CA</p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

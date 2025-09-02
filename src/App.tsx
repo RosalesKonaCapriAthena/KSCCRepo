@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Families from './pages/Families';
 import Tutors from './pages/Tutors';
-import Workshops from './pages/Schools';
+import Workshops from './pages/Workshops';
 import Donate from './pages/Donate';
 import SignIn from './pages/SignIn';
 import Test from './pages/Test';
@@ -17,6 +17,15 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white flex flex-col">
+        {/* Work in Progress Banner */}
+        <div className="bg-yellow-50 border-b border-yellow-200 px-4 py-2">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-center text-sm text-yellow-800">
+              <span className="font-medium">⚠️ Work in Progress:</span> This website is currently under development. 
+              Information displayed may be placeholders or incorrect. Please contact us directly for accurate details.
+            </p>
+          </div>
+        </div>
         <Navigation />
         <main className="flex-grow">
           <Routes>

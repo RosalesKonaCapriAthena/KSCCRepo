@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-200 pt-8 mt-8 text-center">
           <p className="text-gray-500">
-            © 2025 KSCC Nexel. Powered by Koreatown Senior and Community Center.
+            © 2025 KSCC STEM Tutoring. Powered by Koreatown Senior and Community Center.
           </p>
         </div>
       </div>

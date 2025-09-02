@@ -35,7 +35,7 @@ const About = () => {
               Our Story
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About KSCC Nexel
+              About KSCC STEM Tutoring
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A STEM-based tutoring organization hosted by the Koreatown Senior and Community Center, we strive to support young students from 
@@ -84,7 +84,7 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-600">
                 <p>
-                  KSCC Nexel was founded with a simple but powerful idea: every child deserves access to quality education and support, 
+                  KSCC STEM Tutoring was founded with a simple but powerful idea: every child deserves access to quality education and support, 
                   regardless of their family's financial situation.
                 </p>
                 <p>
@@ -282,7 +282,7 @@ const About = () => {
               Dedicated to Student Success
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Nexel is powered by passionate high school students who organize tutoring, lead STEM workshops, and bring our mission to life for kids across Koreatown and LA County.
+            STEM Tutoring is powered by passionate high school students who organize tutoring, lead STEM workshops, and bring our mission to life for kids across Koreatown and LA County.
             </p>
           </div>
 

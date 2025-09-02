@@ -80,7 +80,7 @@ const Families = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Choose KSCC Nexel?
+                Why Choose KSCC STEM Tutoring?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
