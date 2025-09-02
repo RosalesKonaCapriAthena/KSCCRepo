@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Families from './pages/Families';
 import Tutors from './pages/Tutors';
-import Workshops from './pages/Workshops';
+import Workshops from './pages/Schools';
 import Donate from './pages/Donate';
 import SignIn from './pages/SignIn';
 import Test from './pages/Test';
@@ -22,7 +22,7 @@ function App() {
           <div className="max-w-7xl mx-auto">
             <p className="text-center text-sm text-yellow-800">
               <span className="font-medium">⚠️ Work in Progress:</span> This website is currently under development. 
-              Information displayed may be placeholders or incorrect. Please contact us directly for accurate details.
+              Information displayed may be placeholders or incorrect.
             </p>
           </div>
         </div>
